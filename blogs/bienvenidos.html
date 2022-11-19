@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarCraft: Bienvenido a la web</title>
+    <link rel="stylesheet" href="/style.css">
+    <!-- META TAGS-->
+    <meta name="title" content="SolarCraft: Bienvenidos a la web">
+    <meta name="description" content="Bienvenidos a la web de SolarCraft. Esta web esta hecha para que los usuarios puedan dejar sus reportes, opinar sobre una nueva característica. Estamos ...">
+    <meta name="keywords" content="solarcraft, xdonlix, xnotkingdev, arduino, xdonlix development, servidores minecraft java, minecraft java, java, servidores hispanos de minecraft, español, minecraft java, minecraft bedrock, pagina web solarcraft, servidor solarcraft, bienvenidos a la web">
+    <meta name="theme-color" content="#F5DEB3">
+    <meta name="og:url" content="solarcraft.vercel.app/blogs/bienvenidos">
+    <meta name="og:type" content="article">
+    <meta name="og:title" content="SolarCraft: Bienvenidos a la web">
+    <meta name="og:description" content="Bienvenidos a la web de SolarCraft. Esta web esta hecha para que los usuarios puedan dejar sus reportes, opinar sobre una nueva característica. Estamos ...">
+    <script async>
+        const fetchReact = () => {
+            fetch("https://DatabaseServer.solarcraft-dev.repl.co?insert")
+            .then((response) => response.text())
+            .then((data) => document.querySelector("num").innerHTML = data)
+        }
+        const getReacts = () => {
+            fetch("https://DatabaseServer.solarcraft-dev.repl.co?check")
+            .then((response) => response.text())
+            .then((data) => document.querySelector("num").innerHTML = data)
+        }
+    </script>
+</head>
+<body onload="getReacts()">
+    <nav>
+        <img src="/solarcraft.png" alt="SolarCraft es un servidor Minecraft para Minecraft Java basado en el PvP de la 1.7 y 1.8." loading="lazy">
+        <p>
+            <a href="/">Inicio</a>
+            <a href="/discord">Comunidad</a>
+            <a href="https://github.com/xnotkingdev/SolarCraft">Repo</a>
+        </p>
+    </nav>
+    <article>
+        <h2>Bienvenidos a la web!</h2>
+        <span class="react" onclick="fetchReact()">👍 <num></num></span>
+        <p>
+            Bienvenidos a la web de SolarCraft. Esta web esta hecha para que los usuarios puedan dejar sus reportes, opinar sobre una nueva característica. Estamos preparando SolarCraft para que los usuarios tengan la mejor experiencia posible. Si deseas enterarte de absolutamente TODAS las novedades unete a nuestra comunidad de <a href="/discord">Discord</a>.
+        </p>
+        <p>
+            Para los desarolladores web que quieran apoyar a esta web ir al apartado "Repo" en la barra de navegación y os encontrareis el github.
+        </p>
+    </article>
+    <footer>
+        <p>
+            Hecho con <img src="/heart.svg" alt="Hecho por xnotkingdev con amor :)" loading="lazy"> por xnotkingdev_
+        </p>
+    </footer>
+</body>
+</html>
